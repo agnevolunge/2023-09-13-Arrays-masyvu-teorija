@@ -159,3 +159,42 @@ let splicedNums = nums.splice(2, 0, 2.5, 2.8, 2.9)
 
 console.log(splicedNums)
 console.log(nums)
+
+
+//FILTER
+
+let originalNums = [ 1, 2, 3, 4 ,5 ,6 ,7 ,8, 10 ]
+
+console.log(originalNums)
+
+// originalNums.filter(function(element, index, array) { //f-ja iskviecia kiekviena masyvo nari
+// console.log(element)
+// console.log(index)
+// console.log(array)
+// })
+
+let filteredNums = originalNums.filter(function(num) { 
+    console.log(num)
+    console.log(num > 5)
+
+    return num > 5
+ 
+    })
+
+    console.log(filteredNums)
+
+    let filteredNums2 = originalNums.filter(function(num) { 
+    return num > 4 && num <= 8
+     })
+    
+    console.log(filteredNums2)
+
+    let filteredNums3 = originalNums.filter(function(num) { 
+        if (num > 4 && num <= 8 && num % 2 === 0) {
+            return true
+        } else {
+            return false
+        }
+         })
+        
+        console.log(filteredNums3)
