@@ -198,3 +198,44 @@ let filteredNums = originalNums.filter(function(num) {
          })
         
         console.log(filteredNums3)
+
+//MAP metodas grazina reiksme
+
+let numsArr =[1, 4, 9, 12]
+
+for (let i = 0; i < numsArr.length; i++) {
+    console.log ('For ciklas: ' + numsArr[i])
+}
+
+numsArr.map(function(num, index, originalArr) {
+    console.log('Index: ' + index)
+    console.log('Map ciklas: ' + num)
+    console.log('Original Array: ', originalArr)
+})
+
+//FOREACH metodas negrazina reiksmes
+
+numsArr.forEach(function(num, index, originalArr) {
+    console.log('Index: ' + index)
+    console.log('forEach ciklas: ' + num)
+    console.log('Original Array: ', originalArr)
+})
+
+// let mapNums = numsArr.map(function(num){
+//     // console.log(num * num)
+//     // return num * num 
+//     return 'Atsakymas: ' + num * num 
+// })
+
+//MAP sukuria/grazina nauja masyva buvusio masyvo pagrindu
+
+let mapNums = numsArr.map(function(num){
+    // console.log(num * num)
+    // return num * num 
+    return 'Atsakymas: ' + num * num 
+}).reverse() //duoda atsakyma su masyvu kur nariai rikiuojasi nuo galo. pvz. 'labas' padaro 'sabal'
+
+let forEachNums = numsArr.forEach(function(num){
+    return 'Atsakymas: ' + num * num 
+})
+console.log(forEachNums)
